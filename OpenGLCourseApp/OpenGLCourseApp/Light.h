@@ -12,29 +12,16 @@ public:
 		GLfloat green, 
 		GLfloat blue, 
 		GLfloat ambIntensity, 
-		GLfloat xDir, 
-		GLfloat yDir, 
-		GLfloat zDir, 
 		GLfloat dIntensity
-	);
-
-	void UseLight(
-		GLuint ambientIntensityLocation, 
-		GLuint ambientColourLocation,
-		GLuint diffusIntensityLocation,
-		GLuint directionLocation
 	);
 
 	~Light();
 
-private:
+protected:
 	glm::vec3 colour;
 	GLfloat ambientIntensity;
 
 	//for diffuse lighting
-	glm::vec3 direction;
 	GLfloat diffusIntensity;
-
-
 };
 
